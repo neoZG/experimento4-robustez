@@ -1,0 +1,25 @@
+models:
+  - name: "microsoft/bitnet-b1.58-2B-4T-bf16"
+    type: "causal"
+    alias: "BitNet-b1.58"
+  - name: "kweinmeister/distilbert-mnli"
+    type: "seq_classification"
+    alias: "DistilBERT-NLI"
+  - name: "distilbert/distilbert-base-uncased-finetuned-sst-2-english"
+    type: "seq_classification"
+    alias: "DistilBERT-SST2"
+  - name: "mistralai/Mistral-7B-v0.1"
+    type: "causal"
+    alias: "Mistral-7B"
+  - name: "microsoft/phi-2"
+    type: "causal"
+    alias: "Phi-2"
+  - name: "google/gemma-2b-it"
+    type: "causal"
+    alias: "Gemma-2B"
+max_examples:
+  anli: 1000      # use 1000 examples per ANLI round (set -1 for full set)
+  sst2: 1000      # use 1000 examples from SST-2 test (set -1 for full 1821)
+  xnli: 1000      # use 1000 examples from XNLI test (set -1 for full 5010)
+batch_size: 32    # batch size for classification model inference
+device: "cuda"    # device for PyTorch ("cuda" or "cpu")
