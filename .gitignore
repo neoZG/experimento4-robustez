@@ -7,6 +7,8 @@ figures/
 *.csv
 *.json
 
+*.zip
+
 # Analysis files
 analysis/
 *.html
